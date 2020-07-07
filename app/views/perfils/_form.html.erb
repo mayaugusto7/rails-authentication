@@ -12,12 +12,18 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-row">
+    <div class="form-group col-md-5">
     <%= form.label :nome_perfil %><br>
-    <%= form.text_field :nome_perfil %>
+    <%= form.text_field :nome_perfil, class: 'form-control' %>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-row">
+    <div class="form-group col-md-5">
+      <div class="actions">
+        <%= form.submit 'Salvar', class: 'btn btn-success' %>
+      </div>
+    </div>
   </div>
 <% end %>
