@@ -1,0 +1,23 @@
+
+<%= form_with(model: perfil, local: true) do |form| %>
+  <% if perfil.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(perfil.errors.count, "error") %> prohibited this produto from being saved:</h2>
+
+      <ul>
+        <% produto.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome_perfil %><br>
+    <%= form.text_field :nome_perfil %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
